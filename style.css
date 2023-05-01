@@ -65,6 +65,7 @@ ul li {
 
 .header__social-media-item span {
     margin-left: 4px;
+    text-decoration: underline;
 }
 
 /* </header> */
