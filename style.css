@@ -1,0 +1,109 @@
+body {
+    background-color: #eeeeee;
+    color: #323232;
+    font-family: 'Roboto';
+    font-size: 12px;
+    padding: 8px 4px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin-top: 8px;
+}
+
+ul li {
+    margin-top: 2px;
+}
+
+/* <section> */
+
+.section {
+    margin-top: 20px;
+}
+
+.section__title {
+    border-bottom: 1px solid #3d8a7e;
+    color: #3d8a7e;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 4px;
+}
+
+/* </section> */
+
+/* <header> */
+
+.header__full-name {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.header__social-media {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.header__social-media-item {
+    border-left: 1px solid #cccccc;
+    padding-left: 16px;
+}
+
+.header__social-media-item:first-child {
+    border-left: none;
+    padding-left: none;
+}
+
+.header__social-media-item a {
+    color: #323232;
+}
+
+.header__social-media-item span {
+    margin-left: 4px;
+}
+
+/* </header> */
+
+/* <experience> and </education> */
+
+.experience__header,
+.education__item-header {
+    color: #3d8a7e;
+    display: flex;
+    font-weight: 500;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.experience__header *,
+.education__item-header * {
+    width: calc(100% / 3);
+}
+
+.experience__header .experience__header-company,
+.education__item-header .education__item-header-institution {
+    text-align: center;
+}
+
+.experience__header .experience__header-period,
+.education__item-header .education__item-header-period {
+    text-align: end;
+}
+
+/* </experience> and </education> */
+
+/* <projects> */
+
+.projects ul li a {
+    color: #3d8a7e;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* </projects> */
