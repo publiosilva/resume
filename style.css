@@ -20,11 +20,12 @@ a:hover {
 
 ul {
     margin: 6px 0 0;
-    padding-left: 16px;
+    padding-left: 18px;
 }
 
 ul li {
-    margin-top: 4px;
+    margin-top: 5px;
+    padding-left: 0;
 }
 
 /* <section> */
@@ -101,35 +102,37 @@ ul li {
 .experience__header,
 .education__item-header {
     color: #175973;
-    display: flex;
+    display: block;
     font-weight: 600;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 8px;
-    gap: 6px 0;
+    margin-top: 10px;
 }
 
 .experience__header *,
 .education__item-header * {
-    width: calc(100% / 3);
+    display: block;
+    width: 100%;
 }
 
 .experience__header .experience__header-title,
 .education__item-header .education__item-header-title {
     color: #1b2a38;
+    font-size: 12.5px;
+    font-weight: 700;
 }
 
 .experience__header .experience__header-company,
 .education__item-header .education__item-header-institution {
-    text-align: center;
+    text-align: left;
     color: #175973;
+    margin-top: 1px;
 }
 
 .experience__header .experience__header-period,
 .education__item-header .education__item-header-period {
-    text-align: end;
+    text-align: left;
     color: #4a5b6a;
     font-weight: 500;
+    margin-top: 1px;
 }
 
 .experience ul {
@@ -137,7 +140,7 @@ ul li {
 }
 
 .experience li {
-    padding-left: 1px;
+    padding-left: 0;
 }
 
 /* </experience> and </education> */
@@ -161,6 +164,11 @@ ul li {
 
 .skills__category strong {
     color: #175973;
+}
+
+.education__honor {
+    margin-top: 2px;
+    font-style: italic;
 }
 
 /* </skills> */
