@@ -1,0 +1,220 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --win-face: #c0c0c0;
+  --win-face-light: #dfdfdf;
+  --win-face-dark: #808080;
+  --win-face-darker: #0a0a0a;
+  --win-title: #000080;
+  --win-title-inactive: #808080;
+  --win-title-text: #ffffff;
+  --win-desktop: #008080;
+  --win-text: #000000;
+  --win-link: #000080;
+  --win-highlight: #000080;
+  --win-highlight-text: #ffffff;
+  --win-taskbar: #c0c0c0;
+  --win-start-green: #008000;
+  --win-window-bg: #ffffff;
+  --win-accent: #000080;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'MS Sans Serif', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  color: var(--win-text);
+  background: var(--win-desktop);
+  -webkit-font-smoothing: none;
+  user-select: none;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a {
+  color: var(--win-link);
+}
+
+.win-raised {
+  background: var(--win-face);
+  border-top: 2px solid var(--win-face-light);
+  border-left: 2px solid var(--win-face-light);
+  border-right: 2px solid var(--win-face-darker);
+  border-bottom: 2px solid var(--win-face-darker);
+  box-shadow:
+    inset -1px -1px var(--win-face-dark),
+    inset 1px 1px var(--win-face-light);
+}
+
+.win-sunken {
+  background: var(--win-window-bg);
+  border-top: 2px solid var(--win-face-darker);
+  border-left: 2px solid var(--win-face-darker);
+  border-right: 2px solid var(--win-face-light);
+  border-bottom: 2px solid var(--win-face-light);
+  box-shadow:
+    inset 1px 1px var(--win-face-dark),
+    inset -1px -1px #fff;
+}
+
+.win-btn {
+  background: var(--win-face);
+  color: var(--win-text);
+  border-top: 2px solid var(--win-face-light);
+  border-left: 2px solid var(--win-face-light);
+  border-right: 2px solid var(--win-face-darker);
+  border-bottom: 2px solid var(--win-face-darker);
+  box-shadow:
+    inset -1px -1px var(--win-face-dark),
+    inset 1px 1px var(--win-face-light);
+  padding: 2px 8px;
+  min-width: 75px;
+  min-height: 23px;
+  cursor: pointer;
+  outline: none;
+}
+
+.win-btn:active,
+.win-btn.is-pressed {
+  border-top: 2px solid var(--win-face-darker);
+  border-left: 2px solid var(--win-face-darker);
+  border-right: 2px solid var(--win-face-light);
+  border-bottom: 2px solid var(--win-face-light);
+  box-shadow: inset 1px 1px var(--win-face-dark);
+  padding: 3px 7px 1px 9px;
+}
+
+.win-btn:focus-visible {
+  outline: 1px dotted var(--win-text);
+  outline-offset: -4px;
+}
+
+.win-titlebar {
+  background: linear-gradient(90deg, var(--win-title), color-mix(in srgb, var(--win-title) 55%, #000));
+  color: var(--win-title-text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 3px;
+  height: 22px;
+  gap: 4px;
+  cursor: move;
+}
+
+.win-titlebar.is-inactive {
+  background: linear-gradient(90deg, var(--win-title-inactive), color-mix(in srgb, var(--win-title-inactive) 70%, #000));
+}
+
+.win-titlebar__text {
+  font-weight: 700;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  padding-left: 2px;
+}
+
+.win-titlebar__controls {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.win-titlebar__btn {
+  width: 16px;
+  height: 14px;
+  padding: 0;
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.win-scrollbar::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+.win-scrollbar::-webkit-scrollbar-track {
+  background: color-mix(in srgb, var(--win-face) 70%, #fff);
+  background-image: radial-gradient(var(--win-face-dark) 1px, transparent 0);
+  background-size: 2px 2px;
+}
+
+.win-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--win-face);
+  border-top: 2px solid var(--win-face-light);
+  border-left: 2px solid var(--win-face-light);
+  border-right: 2px solid var(--win-face-darker);
+  border-bottom: 2px solid var(--win-face-darker);
+}
+
+.pixel-icon {
+  image-rendering: pixelated;
+  width: 32px;
+  height: 32px;
+}
+
+.desktop-icon {
+  width: 76px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.desktop-icon.is-selected {
+  background: color-mix(in srgb, var(--win-highlight) 35%, transparent);
+}
+
+.desktop-icon__label {
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.2;
+  text-shadow: 1px 1px 1px #000;
+  padding: 1px 3px;
+  max-width: 72px;
+  word-break: break-word;
+}
+
+.desktop-icon.is-selected .desktop-icon__label {
+  background: var(--win-highlight);
+  color: var(--win-highlight-text);
+  text-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .window.is-mobile-fullscreen {
+    inset: 0 !important;
+    width: 100% !important;
+    height: calc(100% - 40px) !important;
+    transform: none !important;
+  }
+}
