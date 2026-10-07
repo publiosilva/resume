@@ -4,8 +4,6 @@ Interactive personal resume as a **Windows 95–style desktop SPA** (Vite + Reac
 
 Live (after Pages is enabled): https://publiosilva.github.io/resume/
 
-The printable ATS resume remains under [`old/`](old/).
-
 ## Stack
 
 - Vite + React 19 + TypeScript
@@ -51,7 +49,7 @@ npm run preview  # preview production build
 
 ## Replace the CV PDF
 
-Overwrite [`public/cv.pdf`](public/cv.pdf) with your preferred export (e.g. from the ATS resume in `old/`).
+Overwrite [`public/cv.pdf`](public/cv.pdf) with your preferred export.
 
 ## Project layout
 
@@ -64,5 +62,4 @@ src/
   theme/          # Classic / dark + wallpaper
   sound/          # Optional click / startup tones
   windows/        # Open / focus / drag / min / max
-old/              # Legacy static ATS resume (untouched)
 ```
