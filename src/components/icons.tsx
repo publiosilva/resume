@@ -174,6 +174,21 @@ export function IconExplorer({ className = 'pixel-icon' }: IconProps) {
   )
 }
 
+export function IconCmd({ className = 'pixel-icon' }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 32 32" aria-hidden>
+      <rect x="3" y="4" width="26" height="22" fill="#000" stroke="#c0c0c0" />
+      <rect x="5" y="6" width="22" height="16" fill="#000080" />
+      <rect x="7" y="12" width="3" height="3" fill="#c0c0c0" />
+      <rect x="11" y="14" width="2" height="1" fill="#c0c0c0" />
+      <rect x="14" y="11" width="2" height="2" fill="#c0c0c0" />
+      <rect x="14" y="14" width="2" height="2" fill="#c0c0c0" />
+      <rect x="17" y="12" width="2" height="4" fill="#ffff00" />
+      <rect x="10" y="26" width="12" height="2" fill="#808080" stroke="#000" />
+    </svg>
+  )
+}
+
 export function IconMines({ className = 'pixel-icon' }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 32 32" aria-hidden>

@@ -27,6 +27,8 @@ function useWindowTitle(id: WindowId): string {
       return t.windowsExplorer
     case 'trash':
       return t.icons.trash
+    case 'cmd':
+      return t.icons.cmd
   }
 }
 

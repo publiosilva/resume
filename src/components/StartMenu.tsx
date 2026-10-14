@@ -3,6 +3,7 @@ import { useI18n } from '../i18n/I18nContext'
 import { useSound } from '../sound/SoundContext'
 import { useWindows, type WindowId } from '../windows/windowStore'
 import {
+  IconCmd,
   IconControl,
   IconExplorer,
   IconMail,
@@ -57,6 +58,9 @@ export function StartMenu({ open, onClose }: Props) {
         <div className="flex-1 bg-[var(--win-face)] py-1">
           <button type="button" className={item} onClick={() => go('explorer')}>
             <IconExplorer className="w-5 h-5" /> {t.windowsExplorer}
+          </button>
+          <button type="button" className={item} onClick={() => go('cmd')}>
+            <IconCmd className="w-5 h-5" /> {t.icons.cmd}
           </button>
           <button type="button" className={item} onClick={() => go('contact')}>
             <IconMail className="w-5 h-5" /> {t.icons.contact}

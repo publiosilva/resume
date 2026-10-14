@@ -18,6 +18,7 @@ export type WindowId =
   | 'mines'
   | 'explorer'
   | 'trash'
+  | 'cmd'
 
 export type WindowState = {
   id: WindowId
@@ -56,6 +57,7 @@ const DEFAULTS: Record<
   mines: { width: 300, height: 400, x: 300, y: 60 },
   explorer: { width: 520, height: 380, x: 100, y: 70 },
   trash: { width: 420, height: 320, x: 180, y: 100 },
+  cmd: { width: 560, height: 360, x: 140, y: 80 },
 }
 
 const WindowContext = createContext<WindowContextValue | null>(null)

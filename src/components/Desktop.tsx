@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from 'react'
 import { AboutMe } from '../apps/AboutMe'
+import { Cmd } from '../apps/Cmd'
 import { Contact } from '../apps/Contact'
 import { ControlPanel } from '../apps/ControlPanel'
 import { Experience } from '../apps/Experience'
@@ -15,6 +16,7 @@ import { useWindows, type WindowId } from '../windows/windowStore'
 import { DesktopIcon } from './DesktopIcon'
 import { FileIcon } from './FileIcon'
 import {
+  IconCmd,
   IconControl,
   IconExplorer,
   IconMail,
@@ -53,6 +55,8 @@ function windowTitle(id: WindowId, t: ReturnType<typeof useI18n>['t']) {
       return t.windowsExplorer
     case 'trash':
       return t.icons.trash
+    case 'cmd':
+      return t.icons.cmd
   }
 }
 
@@ -76,6 +80,8 @@ function windowBody(id: WindowId) {
       return <Explorer />
     case 'trash':
       return <Trash />
+    case 'cmd':
+      return <Cmd />
   }
 }
 
@@ -128,6 +134,12 @@ function windowIcon(id: WindowId): ReactNode {
       return (
         <span className="w-4 h-4 inline-flex [&>svg]:w-4 [&>svg]:h-4">
           <IconTrash />
+        </span>
+      )
+    case 'cmd':
+      return (
+        <span className="w-4 h-4 inline-flex [&>svg]:w-4 [&>svg]:h-4">
+          <IconCmd />
         </span>
       )
   }
