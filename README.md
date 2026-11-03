@@ -47,13 +47,20 @@ npm run preview  # preview production build
 | i18n | Default English; toggle to PT-BR |
 | Sound | Muted by default (Web Audio beeps) |
 
-## Replace the CV PDF
+## Printable CV PDF
 
-Overwrite [`public/cv.pdf`](public/cv.pdf) with your preferred export.
+Edit the HTML resume under [`cv/`](cv/) (`index.html` + `style.css`), then regenerate:
+
+```bash
+npm run cv:pdf
+```
+
+That writes [`public/cv.pdf`](public/cv.pdf) via headless Chrome (Playwright `channel: 'chrome'`). Requires Google Chrome installed. Needs network once so Roboto can load from Google Fonts.
 
 ## Project layout
 
 ```
+cv/               # Printable HTML resume → public/cv.pdf
 src/
   apps/           # Window contents (About, Experience, …)
   components/     # Desktop, Taskbar, Window, StartMenu, …
